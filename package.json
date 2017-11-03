@@ -1,0 +1,48 @@
+{
+  "name": "godotengine",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.8.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.6",
+    "resolve-url-loader": "^2.1.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "stylelint": "^8.2.0",
+    "stylelint-config-recommended": "^1.0.0",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-scss": "^2.1.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.5.5",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-dev-server": "^2.9.4",
+    "webpack-merge": "^4.1.0",
+    "webpack-svg-icon-system": "^0.3.4"
+  },
+  "dependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "html-webpack-template": "^6.0.2",
+    "is-event-supported": "^1.0.1",
+    "normalize.css": "^7.0.0",
+    "smoothscroll-polyfill": "^0.4.0"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "server": "node_modules/.bin/webpack-dev-server --open --config webpack.dev.js",
+    "watch": "webpack --watch --config webpack.dev.js"
+  }
+}
