@@ -28,7 +28,7 @@
     "webpack": "^3.5.5",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-dev-server": "^2.9.4",
-    "webpack-merge": "^4.1.0",
+    "webpack-merge": "^4.1.1",
     "webpack-svg-icon-system": "^0.3.4"
   },
   "dependencies": {
@@ -37,6 +37,7 @@
     "html-webpack-plugin": "^2.30.1",
     "html-webpack-template": "^6.0.2",
     "is-event-supported": "^1.0.1",
+    "normalize-scss": "^7.0.0",
     "normalize.css": "^7.0.0",
     "smoothscroll-polyfill": "^0.4.0"
   },

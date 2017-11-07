@@ -1,0 +1,101 @@
+$tablet: 800px;
+body{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+label{
+  cursor: pointer;
+  svg {
+    z-index: 1;
+    height: 24px;
+    width: 24px;
+    padding: 0 5px 2px 5px;
+    border-bottom: 5px solid $offwhite;
+    height: 35px;
+    width: 35px;
+    background-color: $dark-blue;
+    @include breakpoint($tablet) {
+      padding: unset;
+      border-bottom: unset;
+      background-color: unset;
+      height: 24px;
+      width: 24px;
+      fill: $dark-blue;
+    }
+    top: 1.2em;
+    right: 1.2em;
+    position: fixed;
+    @include breakpoint($tablet) {
+      position: fixed;
+    }
+    transition: fill .2s;
+  }
+}
+input[id=nav]{
+  display: none;
+}
+input[id=nav]:checked ~ #nav {
+  width: 100vw;
+  overflow: hidden;
+  @include breakpoint($tablet) {
+    position: fixed;
+    width: 50%;
+  }
+}
+
+input[id=nav]:checked ~ label {
+  svg {
+    fill: white; 
+  }
+}
+#nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 0;
+  overflow: hidden;
+  color: white;
+  background-color: $dark-blue;
+  transition: width .2s;
+  @include breakpoint($tablet) {
+    position: fixed;
+    right: -25px;
+  }
+  ul {
+    li:first-child {
+      margin-top: 2em;
+    }
+    li:hover {
+      background-color: $offwhite;
+    }
+    // Hide scroll bar
+    width: 100%;
+    height: 90%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    a {
+      padding: 1em;
+      width: 100%;
+      height: 100%;
+      color: white;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+    }
+    a:visited {
+      color: inherit;
+
+    }
+    #selected {
+      background-color: $blue;
+    }
+  }
+}
